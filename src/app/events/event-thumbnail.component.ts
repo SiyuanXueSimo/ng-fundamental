@@ -8,7 +8,7 @@ import { Component, Input} from "@angular/core";
         <div>Date: {{vEvent?.date}}</div>
         <div>Time: {{vEvent?.time}}</div>
         <div>Price: \${{vEvent?.price}}</div>
-        <div *ngIf="vEvent?.location">
+        <div [hidden]="!vEvent?.location">
             <span>Location: {{vEvent?.location?.address}}</span>
             <span class="pad-left">{{vEvent?.location?.city}}, {{vEvent?.location?.country}}</span>
         </div>
